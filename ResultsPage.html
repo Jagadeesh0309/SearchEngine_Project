@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body class="search-results-page">
+    <div class="search-container">
+      <form action="{{ url_for('search') }}" method="get">
+        <input type="text" placeholder="Enter your search query" name="q" required value="{{ query }}">
+        <button type="submit">Search</button>
+      </form>
+    </div>    
+    <div class="results-container">
+      <h2>Search results for "{{ query }}"</h2>
+      {% if results %}
+        <ul>
+          {% for result, similarity in results.items() %}
+            <li><a href="{{ result }}">{{ result }}</a> - <span class="similarity">Score: {{ similarity }}</span></li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No results found.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

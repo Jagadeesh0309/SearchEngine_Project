@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  
+  .search-container img {
+    max-width: 75%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .search-container form {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  .similarity {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75em !important;
+    color: #000800;
+    margin: 20px 0;
+  }
+  
+  .search-results-page .search-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  

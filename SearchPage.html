@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="search-container">
+      <img src="{{ url_for('static', filename='KUMarksLogo.png') }}" alt="Logo">
+      <form action="{{ url_for('search') }}" method="get">
+        <input type="text" placeholder="Enter your search query" name="q" required>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </body>
+</html>
